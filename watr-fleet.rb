@@ -5,23 +5,23 @@
 class WatrFleet < Formula
   desc "A beautiful terminal dashboard for your fleet of AI coding agents"
   homepage "https://github.com/edbror/watr-fleet"
-  version "0.10.0"
+  version "0.10.1"
   license "MIT"
 
   depends_on "tmux"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/edbror/watr-fleet/releases/download/v0.10.0/watr-fleet_0.10.0_darwin_amd64.tar.gz"
-      sha256 "79fab4f106a4c9260646a6a211c4f013814598b3dd3686ec287d6d4f7d9a81ed"
+      url "https://github.com/edbror/watr-fleet/releases/download/v0.10.1/watr-fleet_0.10.1_darwin_amd64.tar.gz"
+      sha256 "58d8c8072258a78e302bf46f960facf075dc0dc89e5f0301397582a4fd0a3536"
 
       define_method(:install) do
         bin.install "fleet"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/edbror/watr-fleet/releases/download/v0.10.0/watr-fleet_0.10.0_darwin_arm64.tar.gz"
-      sha256 "a24d33b334e59aa90d308b6f1ab702f62c264440f87b20b80841e437ef4b09aa"
+      url "https://github.com/edbror/watr-fleet/releases/download/v0.10.1/watr-fleet_0.10.1_darwin_arm64.tar.gz"
+      sha256 "685e207c909982088f33b4f01e4ae2093a8dd09e0f4f0335ed0e83c68e4ece21"
 
       define_method(:install) do
         bin.install "fleet"
@@ -31,15 +31,15 @@ class WatrFleet < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edbror/watr-fleet/releases/download/v0.10.0/watr-fleet_0.10.0_linux_amd64.tar.gz"
-      sha256 "ff5109b5f6a589f64d6f017c4c1e2345b8b00b4caf2b8c327bc631cde39d3eed"
+      url "https://github.com/edbror/watr-fleet/releases/download/v0.10.1/watr-fleet_0.10.1_linux_amd64.tar.gz"
+      sha256 "873968a125bd2a49e73c1f78c2aacca5816eaadc819f9fb39d07d34dbe5aee58"
       define_method(:install) do
         bin.install "fleet"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edbror/watr-fleet/releases/download/v0.10.0/watr-fleet_0.10.0_linux_arm64.tar.gz"
-      sha256 "78367ee2e7ce6b0da97b15cf3bf42f6bc149cbeed4f27405e59a65b1524561d9"
+      url "https://github.com/edbror/watr-fleet/releases/download/v0.10.1/watr-fleet_0.10.1_linux_arm64.tar.gz"
+      sha256 "3df8819f5dbb23637c09b2e1864a9425e029114382a09bfce6e1135b4e0f9f33"
       define_method(:install) do
         bin.install "fleet"
       end
